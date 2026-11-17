@@ -43,7 +43,7 @@ export default async (request) => {
     return jsonResponse(413, { error: "Query is too long. Maximum length is 4000 characters." });
   }
 
-  const baseUrl = (process.env.DIFY_BASE_URL || "https://dify.ai").replace(/\/+$/, "");
+  const baseUrl = (process.env.DIFY_BASE_URL || "https://api.dify.ai/v1").replace(/\/+$/, "");
   const endpoint = `${baseUrl}/chat-messages`;
 
   try {
